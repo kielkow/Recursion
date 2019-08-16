@@ -5,7 +5,8 @@ public class CollegeTasks {
     public static void main(String[] args) {
         //soma(500);
         //regressiva(15);
-        fibonacciInt(34);
+        //fibonacciInt(34);
+        System.out.println(pow(4,2));
     }
 
     public static int soma(int n) {
@@ -39,9 +40,9 @@ public class CollegeTasks {
         }
     }
 
-    public static void fibonacciRec(int n) {
+    public static int fibonacciRec(int n) {
         if(n == 0){
-            System.out.println(n);
+            return n;
         }
         else{
             
@@ -49,11 +50,11 @@ public class CollegeTasks {
     }
 
     public static int pow(int n, int m) {
-        if(n >= pow(n, m)){
-            return n;
+        if(m == 0){
+            return 1;
         }
         else{
-            return 1;
+            return (n * pow(n, m - 1));
         }
     }
 }
