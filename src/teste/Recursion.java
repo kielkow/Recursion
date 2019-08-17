@@ -32,11 +32,11 @@ public class CollegeTasks {
         int y = 1;
         int res = 0;
 
-        for (int i = 0; res <= n; i++) {
-            System.out.println(res);
+        for (int i = 0; res < n; i++) {
             res = x;
             x = y;
             y = res + y;
+            System.out.println(res);
         }
     }
 
