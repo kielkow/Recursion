@@ -6,12 +6,14 @@ public class CollegeTasks {
         //soma(500);
         //regressiva(15);
         
-        //System.out.println(fibonacciInt(11));
-        //mostraSequenciafibonacciInt(11);
+        //System.out.println(fibonacciInt(12));
+        //mostraSequenciafibonacciInt(12);
         
-        //System.out.println(fibonacciRec(5));
+        //System.out.println("-------------");
+        
+        //System.out.println(fibonacciRec(12));
         //System.out.println(mostraSequenciafibonacciRec(12));
-        
+
         //System.out.println(pow(5,5));
     }
 
@@ -33,12 +35,12 @@ public class CollegeTasks {
         }
     }
 
-public static int fibonacciInt(int n) {
+    public static int fibonacciInt(int n) {
         int x = 0;
         int y = 1;
         int res = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             res = x;
             x = y;
             y = res + y;
@@ -71,23 +73,24 @@ public static int fibonacciInt(int n) {
     }
 
     public static int mostraSequenciafibonacciRec(int n) {
-                if(n == 0){
-                    return 0;
-                }
-                
-                int x = 0;
-                int y = 1;
-                int res = 0;
-                
-                for (int i = 0; i < n; i++) {
-                    res = x;
-                    x = y;
-                    y = res + y;
-                }
-                if(res > 0){
-                    System.out.println(res);
-                }
-                return mostraSequenciafibonacciRec(n - 1);
+
+        if (n == 0) {
+            return 0;
+        }
+
+        int x = 0;
+        int y = 1;
+        int res = 0;
+
+        for (int i = 0; i < n; i++) {
+            res = x;
+            x = y;
+            y = res + y;
+        }
+        if (res > 0) {
+            System.out.println(res);
+        }
+        return mostraSequenciafibonacciRec(n - 1);
     }
 
     public static int pow(int n, int m) {
